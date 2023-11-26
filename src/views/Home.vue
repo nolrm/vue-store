@@ -1,16 +1,23 @@
 <template>
-    <div>
-      <ProductList :products="products" />
+  <MainLayout>
+    <div class="page-home">
+      <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-semibold mb-4">Our Menu</h1>
+        
+        <ProductList :products="products" />
+      </div>
     </div>
-  </template>
+  </MainLayout>
+</template>
   
-  <script>
-  // import axios from 'axios';
+<script>
+  import MainLayout from '@/layouts/MainLayout.vue';
   import ProductList from '@/components/ProductList.vue';
-  
+
   export default {
     components: {
-      ProductList,
+      MainLayout,
+      ProductList
     },
     data() {
       return {
@@ -31,4 +38,4 @@
         },
     },
   };
-  </script>
+</script>

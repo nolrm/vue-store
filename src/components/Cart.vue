@@ -1,26 +1,33 @@
 <template>
-    <div>
-      <h2>Shopping Cart</h2>
-      <ul>
-        <li v-for="item in cart" :key="item.id">
-          {{ item.name }} - ${{ item.price }} - Quantity: {{ item.quantity }}
-          <button @click="removeFromCart(item)">Remove</button>
-        </li>
-      </ul>
-    </div>
-  </template>
-  
-  <script>
-  export default {
+    <MainLayout>
+        <div>
+            <h2>Shopping Cart</h2>
+            <ul>
+            <li v-for="item in cart" :key="item.id">
+                {{ item.name }} - ${{ item.price }} - Quantity: {{ item.quantity }}
+                <button @click="removeFromCart(item)">Remove</button>
+            </li>
+            </ul>
+        </div>
+    </MainLayout>
+</template>
+
+<script>
+import MainLayout from '@/layouts/MainLayout.vue';
+
+export default {
+    components: {
+        MainLayout,
+    },
     computed: {
-      cart() {
+        cart() {
         return this.$store.state.cart;
-      },
+        },
     },
     methods: {
-      removeFromCart(item) {
+        removeFromCart(item) {
         this.$store.commit('removeFromCart', item);
-      },
+        },
     },
-  };
-  </script>
+};
+</script>
