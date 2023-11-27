@@ -21,12 +21,14 @@ export default {
     },
     computed: {
         cart() {
-        return this.$store.state.cart;
+            console.log('this.$store.state', this.$store.state)
+            console.log('this.$store.state', this.$store.state.cart)
+            return this.$store.state.cart;
         },
     },
     methods: {
         removeFromCart(item) {
-        this.$store.commit('removeFromCart', item);
+            this.$store.commit('removeFromCart', item);
         },
     },
 };

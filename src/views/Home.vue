@@ -1,11 +1,9 @@
 <template>
   <MainLayout>
     <div class="page-home">
-      <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-semibold mb-4">Our Menu</h1>
+      <h1 class="text-3xl font-semibold mb-4">Our Menu</h1>
         
-        <ProductList :products="products" />
-      </div>
+      <ProductList :products="products" />
     </div>
   </MainLayout>
 </template>

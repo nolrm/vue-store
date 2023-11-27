@@ -19,6 +19,7 @@
     props: ['products'],
     methods: {
       addToCart(product) {
+        console.log('Adding to cart..', product)
         this.$store.commit('addToCart', product);
       },
     },

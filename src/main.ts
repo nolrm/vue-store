@@ -12,3 +12,6 @@ app.use(store)
 app.use(router)
 
 app.mount('#app');
+
+// Dispatch the action to load data from session storage
+app.config.globalProperties.$store.dispatch('loadDataFromSessionStorage');

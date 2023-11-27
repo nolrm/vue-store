@@ -4,7 +4,7 @@
         <MainNav />
     </header>
 
-    <main>
+    <main class="main-content container mx-auto">
         <slot/>
     </main>
 
