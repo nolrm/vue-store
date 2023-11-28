@@ -9,33 +9,31 @@
 </template>
 
 <script>
-import MainLayout from '@/layouts/MainLayout.vue'
-import ProductList from '@/components/ProductList.vue'
+  import MainLayout from '@/layouts/MainLayout.vue'
+  import ProductList from '@/components/ProductList.vue'
 
-export default {
-  components: {
-    MainLayout,
-    ProductList,
-  },
-  data() {
-    return {
-      products: [],
-    }
-  },
-  mounted() {
-    this.fetchProducts()
-  },
-  methods: {
-    async fetchProducts() {
-      try {
-        const response = await this.axios.get(
-          'https://fakestoreapi.com/products'
-        )
-        this.products = response.data.slice(0, 5) // Using only the first 5 items for simplicity
-      } catch (error) {
-        console.error('Error fetching products:', error)
+  export default {
+    components: {
+      MainLayout,
+      ProductList,
+    },
+    data() {
+      return {
+        products: [],
       }
     },
-  },
-}
+    mounted() {
+      this.fetchProducts()
+    },
+    methods: {
+      async fetchProducts() {
+        try {
+          const response = await this.axios.get('https://fakestoreapi.com/products')
+          this.products = response.data.slice(0, 5) // Using only the first 5 items for simplicity
+        } catch (error) {
+          console.error('Error fetching products:', error)
+        }
+      },
+    },
+  }
 </script>

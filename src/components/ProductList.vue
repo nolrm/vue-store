@@ -19,13 +19,13 @@
 </template>
 
 <script>
-export default {
-  props: ['products'],
-  methods: {
-    addToCart(product) {
-      console.log('Adding to cart..', product)
-      this.$store.commit('addToCart', product)
+  export default {
+    props: ['products'],
+    methods: {
+      addToCart(product) {
+        console.log('Adding to cart..', product)
+        this.$store.commit('addToCart', product)
+      },
     },
-  },
-}
+  }
 </script>

@@ -3,7 +3,7 @@
     <div class="container mx-auto flex items-center justify-between">
       <div>
         <!-- Your Logo -->
-        <img src="your-logo.png" alt="Logo" class="w-12 h-12" />
+        <img src="/logo.svg" alt="Logo" class="w-12 h-12" />
       </div>
       <div class="space-x-4">
         <!-- Menu Links -->
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    test() {
-      // Handle links logic
+  export default {
+    methods: {
+      test() {
+        // Handle links logic
+      },
     },
-  },
-}
+  }
 </script>

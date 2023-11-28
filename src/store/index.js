@@ -30,7 +30,7 @@ const store = createStore({
   actions: {
     // Action to load data from session storage
     loadDataFromSessionStorage({ commit }) {
-      console.log('On mount - getting data from storage')
+      console.log('On mount - getting data from storage', commit)
       const savedState = sessionStorage.getItem('vueStore')
       if (savedState) {
         this.state.cart = [...JSON.parse(savedState).cart]

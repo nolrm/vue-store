@@ -4,7 +4,7 @@
     <MainNav />
   </header>
 
-  <main class="main-content container mx-auto">
+  <main class="main-content container mx-auto pt-10 pb-10">
     <slot />
   </main>
 
@@ -15,12 +15,12 @@
 </template>
 
 <script>
-// import axios from 'axios';
-import MainNav from '@/components/MainNav.vue'
+  // import axios from 'axios';
+  import MainNav from '@/components/MainNav.vue'
 
-export default {
-  components: {
-    MainNav,
-  },
-}
+  export default {
+    components: {
+      MainNav,
+    },
+  }
 </script>

@@ -9,11 +9,11 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    checkout() {
-      // Handle checkout logic
+  export default {
+    methods: {
+      checkout() {
+        // Handle checkout logic
+      },
     },
-  },
-}
+  }
 </script>
