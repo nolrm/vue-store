@@ -1,17 +1,17 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-import 'tailwindcss/tailwind.css'; // Add this line if you're using Tailwind CSS or update it based on your CSS framework
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import 'tailwindcss/tailwind.css' // Add this line if you're using Tailwind CSS or update it based on your CSS framework
 
-const app = createApp(App);
-app.use(VueAxios, axios);
+const app = createApp(App)
+app.use(VueAxios, axios)
 app.use(store)
 app.use(router)
 
-app.mount('#app');
+app.mount('#app')
 
 // Dispatch the action to load data from session storage
-app.config.globalProperties.$store.dispatch('loadDataFromSessionStorage');
+app.config.globalProperties.$store.dispatch('loadDataFromSessionStorage')
