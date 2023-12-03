@@ -16,11 +16,11 @@
 
 <script>
   // import axios from 'axios';
-  import MainNav from '@/components/MainNav.vue'
+  import MainNav from '@/components/MainNav.vue';
 
   export default {
     components: {
       MainNav,
     },
-  }
+  };
 </script>

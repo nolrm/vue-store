@@ -17,19 +17,19 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+  import { mapState, mapGetters } from 'vuex';
 
-export default {
-  computed: {
-    cartTotalItem() {
-      // Access the getter from the store
-      return this.$store.getters["cartTotal"] || 0;
+  export default {
+    computed: {
+      cartTotalItem() {
+        // Access the getter from the store
+        return this.$store.getters['cartTotal'] || 0;
+      },
     },
-  },
-  methods: {
-    test() {
-      // Handle links logic
+    methods: {
+      test() {
+        // Handle links logic
+      },
     },
-  },
-};
+  };
 </script>

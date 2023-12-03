@@ -24,13 +24,13 @@
     props: ['products'],
     methods: {
       addToCart(product) {
-        console.log('Adding to cart..', product)
-        this.$store.commit('addToCart', product)
+        console.log('Adding to cart..', product);
+        this.$store.commit('addToCart', product);
       },
       removeFromCart(product) {
-        console.log('Adding to cart..', product)
-        this.$store.commit('removeFromCart', product)
+        console.log('Adding to cart..', product);
+        this.$store.commit('removeFromCart', product);
       },
     },
-  }
+  };
 </script>

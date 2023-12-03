@@ -15,5 +15,5 @@
         // Handle checkout logic
       },
     },
-  }
+  };
 </script>
