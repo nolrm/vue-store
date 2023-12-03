@@ -1,4 +1,4 @@
-import { createStore } from 'vuex';
+import { createStore } from "vuex";
 
 const initialState = {
   products: [],
@@ -23,7 +23,7 @@ const initialState = {
 const mutations = {
   updateProperty(state, payload) {
     // Common logic to be applied to mutations
-    console.log('Common logic executed');
+    console.log("Common logic executed");
 
     // Your specific mutation logic
     state[payload.property] = payload.value;
@@ -31,12 +31,12 @@ const mutations = {
 
   setPropertyA(state, value) {
     // Call the common mutation
-    mutations.updateProperty(state, { property: 'propertyA', value });
+    mutations.updateProperty(state, { property: "propertyA", value });
   },
 
   setPropertyB(state, value) {
     // Call the common mutation
-    mutations.updateProperty(state, { property: 'propertyB', value });
+    mutations.updateProperty(state, { property: "propertyB", value });
   },
 };
 
@@ -52,7 +52,7 @@ const store = createStore({
       // state.cart.totalItems = totalQty;
 
       // console.log("state.cart -- ", totalQty);
-      console.log('Update cart tooo --- ');
+      console.log("Update cart tooo --- ");
     },
 
     addToCart(state, product) {
@@ -64,11 +64,13 @@ const store = createStore({
         state.cart.items.push({ ...product, quantity: 1 });
       }
 
-      mutations.updateCartTotals(state);
+      // mutations.updateCartTotals(state);
     },
 
     removeFromCart(state, product) {
-      const index = state.cart.findIndex((item) => item.id === product.id);
+      const index = state.cart.items.findIndex(
+        (item) => item.id === product.id
+      );
 
       if (index !== -1) {
         if (state.cart.items[index].quantity > 1) {
@@ -78,23 +80,23 @@ const store = createStore({
         }
       }
 
-      this.mutations.updateCartTotals();
+      // this.mutations.updateCartTotals();
     },
   },
 
   actions: {
     // Action to load data from session storage
     loadDataFromSessionStorage({ commit }) {
-      const savedState = sessionStorage.getItem('vueStore');
-      console.log('On mount - getting data from storage', commit);
-      console.log('Session storage - ', savedState);
+      const savedState = sessionStorage.getItem("vueStore");
+      console.log("On mount - getting data from storage", commit);
+      console.log("Session storage - ", savedState);
 
       if (savedState) {
-        console.log('session storage here -- ');
+        console.log("session storage here -- ");
         // this.state = { ...JSON.parse(savedState) };
         store.replaceState({ ...JSON.parse(savedState) });
 
-        console.log('Current State', this.state.cart);
+        console.log("Current State", this.state.cart);
       }
     },
   },
@@ -106,11 +108,11 @@ const store = createStore({
     (store) => {
       // Save the state to session storage whenever the state changes
       store.subscribe((mutation, state) => {
-        sessionStorage.setItem('vueStore', JSON.stringify(state));
+        sessionStorage.setItem("vueStore", JSON.stringify(state));
       });
 
       // Optionally, load the initial state from session storage
-      const savedState = sessionStorage.getItem('vueStore');
+      const savedState = sessionStorage.getItem("vueStore");
       if (savedState) {
         store.replaceState(JSON.parse(savedState));
       }
@@ -118,13 +120,25 @@ const store = createStore({
   ],
 
   getters: {
-    cartTotal: (state) => {
-      const totalQty = state.cart.items.reduce((total, item) => total + item.quantity, 0);
-      // state.cart.totalItems = totalQty;
+    cartTotalItems: (state) => {
+      const totalItems = state.cart.items.reduce(
+        (total, item) => total + item.quantity,
+        0
+      );
 
-      console.log('state.cart -- ', totalQty);
+      state.cart.totalItems = totalItems;
 
-      return totalQty;
+      return totalItems;
+    },
+    cartTotalPrice: (state) => {
+      const totalPrice = state.cart.items.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+
+      state.cart.totalPrice = totalPrice;
+
+      return totalPrice;
     },
   },
 });

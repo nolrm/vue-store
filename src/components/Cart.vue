@@ -12,23 +12,23 @@
 </template>
 
 <script>
-  import MainLayout from '@/layouts/MainLayout.vue';
+import MainLayout from "@/layouts/MainLayout.vue";
 
-  export default {
-    components: {
-      MainLayout,
+export default {
+  components: {
+    MainLayout,
+  },
+  computed: {
+    cart() {
+      console.log("this.$store.state", this.$store.state);
+      console.log("this.$store.state", this.$store.state.cart);
+      return this.$store.state.cart;
     },
-    computed: {
-      cart() {
-        console.log('this.$store.state', this.$store.state);
-        console.log('this.$store.state', this.$store.state.cart);
-        return this.$store.state.cart;
-      },
+  },
+  methods: {
+    removeFromCart(item) {
+      this.$store.commit("removeFromCart", item);
     },
-    methods: {
-      removeFromCart(item) {
-        this.$store.commit('removeFromCart', item);
-      },
-    },
-  };
+  },
+};
 </script>

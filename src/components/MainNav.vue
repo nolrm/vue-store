@@ -8,7 +8,7 @@
       <div class="space-x-4">
         <!-- Menu Links -->
         <a href="/" class="text-white">Home</a>
-        <a href="/cart" class="text-white">Cart ({{ cartTotalItem }})</a>
+        <a href="/cart" class="text-white">Cart ({{ totalQty }})</a>
         <a href="/checkout" class="text-white">Checkout</a>
         <a href="#" class="text-white">Contact</a>
       </div>
@@ -17,19 +17,17 @@
 </template>
 
 <script>
-  import { mapState, mapGetters } from 'vuex';
-
-  export default {
-    computed: {
-      cartTotalItem() {
-        // Access the getter from the store
-        return this.$store.getters['cartTotal'] || 0;
-      },
+export default {
+  computed: {
+    totalQty() {
+      // Access the getter from the store
+      return this.$store.getters["cartTotalItems"] || 0;
     },
-    methods: {
-      test() {
-        // Handle links logic
-      },
+  },
+  methods: {
+    test() {
+      // Handle links logic
     },
-  };
+  },
+};
 </script>
