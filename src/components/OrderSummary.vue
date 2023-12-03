@@ -61,12 +61,7 @@
       <span class="text-xl font-semibold">$ {{ totalPrice }}</span>
     </div>
 
-    <!-- Checkout Button -->
-    <button
-      class="mt-6 w-full bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700"
-    >
-      Checkout
-    </button>
+    <slot/>
   </div>
 </template>
 

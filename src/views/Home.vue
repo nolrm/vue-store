@@ -10,8 +10,15 @@
           <ProductList :products="products" />
         </div>
 
-        <div class="w-300">
-          <order-summary />
+        <div class="w-280">
+          <order-summary>
+            <a
+              href="/checkout"
+              class="block mt-6 w-full bg-gray-800 text-white text-center py-2 rounded-md hover:bg-gray-700"
+            >
+              Checkout
+            </a>
+          </order-summary>
         </div>
       </div>
     </div>
@@ -43,7 +50,7 @@ export default {
         const response = await this.axios.get(
           "https://fakestoreapi.com/products"
         );
-        this.products = response.data.slice(0, 5); // Using only the first 5 items for simplicity
+        this.products = response.data.slice(0, 10); // Using only the first 10 items for simplicity
       } catch (error) {
         console.error("Error fetching products:", error);
       }
