@@ -24,15 +24,15 @@
 </template>
 
 <script>
-import MainLayout from "@/layouts/MainLayout.vue";
-import Checkout from "@/components/Checkout.vue";
-import OrderSummary from "@/components/OrderSummary.vue";
+  import MainLayout from '@/layouts/MainLayout.vue';
+  import Checkout from '@/components/Checkout.vue';
+  import OrderSummary from '@/components/OrderSummary.vue';
 
-export default {
-  components: {
-    MainLayout,
-    Checkout,
-    OrderSummary,
-  },
-};
+  export default {
+    components: {
+      MainLayout,
+      Checkout,
+      OrderSummary,
+    },
+  };
 </script>

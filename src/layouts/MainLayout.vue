@@ -6,6 +6,7 @@
     </header>
 
     <main class="flex-grow main-content container mx-auto pt-10 pb-10">
+      <notification />
       <slot />
     </main>
 
@@ -17,11 +18,13 @@
 </template>
 
 <script>
-import MainNav from "@/components/MainNav.vue";
+  import MainNav from '@/components/MainNav.vue';
+  import Notification from '@/components/Notification.vue';
 
-export default {
-  components: {
-    MainNav,
-  },
-};
+  export default {
+    components: {
+      MainNav,
+      Notification,
+    },
+  };
 </script>

@@ -10,14 +10,9 @@
       <ul class="list-disc pl-4">
         <li>No cash accepted and No eftpos facility for online orders.</li>
         <li>Estimate made to order cooking time is minimum 60mins.</li>
-        <li>
-          Please don't submit same order twice, wait for a confirmation message.
-        </li>
+        <li>Please don't submit same order twice, wait for a confirmation message.</li>
         <li>No refund/cancellation policy.</li>
-        <li>
-          We do not accept orders in advance. Kindly place your order for same
-          day!
-        </li>
+        <li>We do not accept orders in advance. Kindly place your order for same day!</li>
       </ul>
 
       <button
@@ -31,11 +26,11 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    checkout() {
-      // Handle checkout logic
+  export default {
+    methods: {
+      checkout() {
+        // Handle checkout logic
+      },
     },
-  },
-};
+  };
 </script>

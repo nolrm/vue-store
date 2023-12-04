@@ -5,10 +5,9 @@
         <h1 class="text-3xl font-semibold mb-4">Vue store + Tailwind CSS</h1>
 
         <p>
-          Welcome to our online store, a modern and user-friendly e-commerce
-          platform built with the latest web technologies. Our website is
-          powered by Vite, Vue.js, and enhanced with the sleek styling of
-          Tailwind CSS, ensuring a seamless and visually appealing shopping
+          Welcome to our online store, a modern and user-friendly e-commerce platform built with the
+          latest web technologies. Our website is powered by Vite, Vue.js, and enhanced with the
+          sleek styling of Tailwind CSS, ensuring a seamless and visually appealing shopping
           experience.
         </p>
 
@@ -26,11 +25,7 @@
               stroke="currentColor"
               class="w-6 h-6"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
             </svg>
           </div>
 
@@ -58,19 +53,12 @@
               stroke="currentColor"
               class="w-6 h-6"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m6-6H6"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
             </svg>
           </div>
 
           <div>
-            <svg
-              viewBox="0 0 248 31"
-              class="text-slate-900 dark:text-white w-auto h-6"
-            >
+            <svg viewBox="0 0 248 31" class="text-slate-900 dark:text-white w-auto h-6">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -92,11 +80,11 @@
 </template>
 
 <script>
-import MainLayout from "@/layouts/MainLayout.vue";
+  import MainLayout from '@/layouts/MainLayout.vue';
 
-export default {
-  components: {
-    MainLayout,
-  },
-};
+  export default {
+    components: {
+      MainLayout,
+    },
+  };
 </script>

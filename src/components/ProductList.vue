@@ -32,17 +32,17 @@
 </template>
 
 <script>
-export default {
-  props: ["products"],
-  methods: {
-    addToCart(product) {
-      console.log("Adding to cart..", product);
-      this.$store.commit("addToCart", product);
+  export default {
+    props: ['products'],
+    methods: {
+      addToCart(product) {
+        console.log('Adding to cart..', product);
+        this.$store.commit('addToCart', product);
+        this.$store.dispatch('showNotification', {
+          message: 'Added to cart',
+          type: 'success',
+        });
+      },
     },
-    removeFromCart(product) {
-      console.log("Adding to cart..", product);
-      this.$store.commit("removeFromCart", product);
-    },
-  },
-};
+  };
 </script>
