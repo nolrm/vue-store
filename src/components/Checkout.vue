@@ -58,10 +58,10 @@
         </div>
 
         <div class="form-control mb-5">
-          <label for="email">Notes:</label>
+          <label for="notes">Notes:</label>
           <textarea
             id="notes"
-            v-model="notes"
+            v-model="formData.notes"
             class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
             :class="{ 'is-invalid': validationErrors.notes }"
             rows="4"
