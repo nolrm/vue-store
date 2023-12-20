@@ -11,9 +11,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 p-4">
+    <!-- <footer class="bg-gray-800 p-4">
       <p class="text-white text-center">Vue Store @nolrm</p>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
