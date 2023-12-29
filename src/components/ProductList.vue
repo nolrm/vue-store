@@ -17,12 +17,9 @@
               <p class="text-gray-800 font-bold mt-2">${{ product.price }}</p>
             </div>
             <div>
-              <button
-                @click="addToCart(product)"
-                class="bg-gray-800 text-white rounded hover:bg-gray-700 px-2 py-1"
-              >
+              <m-button @click="addToCart(product)" primary size="small">
                 ADD
-              </button>
+              </m-button>
             </div>
           </div>
         </div>
@@ -32,7 +29,12 @@
 </template>
 
 <script>
+  import MButton from '@/components/MButton.vue';
+
   export default {
+    components: {
+      MButton
+    },
     props: ['products'],
     methods: {
       addToCart(product) {

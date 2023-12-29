@@ -40,12 +40,9 @@
 
         <div class="w-280 max-w-sm">
           <order-summary>
-            <a
-              href="/checkout"
-              class="block mt-6 w-full bg-gray-800 text-white text-center py-2 rounded-md hover:bg-gray-700"
-            >
+            <m-button href="/checkout" primary class="mt-6 w-full">
               Checkout
-            </a>
+            </m-button>
           </order-summary>
         </div>
       </div>
@@ -57,12 +54,14 @@
   import MainLayout from '@/layouts/MainLayout.vue';
   import ProductList from '@/components/ProductList.vue';
   import OrderSummary from '@/components/OrderSummary.vue';
+  import MButton from '@/components/MButton.vue';
 
   export default {
     components: {
       MainLayout,
       ProductList,
-      OrderSummary
+      OrderSummary,
+      MButton
     },
     data() {
       return {

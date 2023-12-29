@@ -94,12 +94,7 @@
         </ul>
 
         <div>
-          <button
-            type="submit"
-            class="mt-6 w-40 bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700"
-          >
-            Place Order
-          </button>
+          <m-button type="submit" primary class="mt-6"> Place Order </m-button>
         </div>
       </form>
     </div>
@@ -107,7 +102,12 @@
 </template>
 
 <script>
+  import MButton from '@/components/MButton.vue';
+
   export default {
+    components: {
+      MButton
+    },
     data() {
       return {
         formData: {
