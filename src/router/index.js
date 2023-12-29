@@ -10,12 +10,12 @@ const routes = [
   { path: '/cart', component: CartView },
   { path: '/checkout', component: CheckoutView },
   { path: '/order', component: OrderView },
-  { path: '/track-order', component: TrackOrder },
+  { path: '/track-order', component: TrackOrder }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 });
 
 export default router;

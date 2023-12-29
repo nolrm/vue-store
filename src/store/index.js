@@ -5,24 +5,24 @@ const initialState = {
   cart: {
     items: [],
     totalItems: 0,
-    totalPrice: 0,
+    totalPrice: 0
   },
   isAuthenticated: false,
   user: null,
   checkout: {
     shippingInfo: {},
     paymentDetails: {},
-    orderSummary: {},
+    orderSummary: {}
   },
   ui: {
     isLoading: false,
-    showModal: false,
+    showModal: false
   },
   notification: {
     isVisible: false,
     message: '',
-    type: '',
-  },
+    type: ''
+  }
 };
 
 const store = createStore({
@@ -40,7 +40,9 @@ const store = createStore({
     },
 
     removeFromCart(state, product) {
-      const index = state.cart.items.findIndex((item) => item.id === product.id);
+      const index = state.cart.items.findIndex(
+        (item) => item.id === product.id
+      );
 
       if (index !== -1) {
         if (state.cart.items[index].quantity > 1) {
@@ -59,7 +61,7 @@ const store = createStore({
 
     hideNotification(state) {
       state.notification.isVisible = false;
-    },
+    }
   },
 
   actions: {
@@ -85,7 +87,7 @@ const store = createStore({
       setTimeout(() => {
         commit('hideNotification');
       }, 5000);
-    },
+    }
   },
 
   modules: {},
@@ -103,12 +105,15 @@ const store = createStore({
       if (savedState) {
         store.replaceState(JSON.parse(savedState));
       }
-    },
+    }
   ],
 
   getters: {
     cartTotalItems: (state) => {
-      const totalItems = state.cart.items.reduce((total, item) => total + item.quantity, 0);
+      const totalItems = state.cart.items.reduce(
+        (total, item) => total + item.quantity,
+        0
+      );
 
       state.cart.totalItems = totalItems;
 
@@ -117,7 +122,7 @@ const store = createStore({
     cartTotalPrice: (state) => {
       let totalPrice = state.cart.items.reduce(
         (total, item) => total + item.price * item.quantity,
-        0,
+        0
       );
 
       // Round to 2 decimal
@@ -126,8 +131,8 @@ const store = createStore({
       state.cart.totalPrice = totalPrice;
 
       return totalPrice;
-    },
-  },
+    }
+  }
 });
 
 export default store;

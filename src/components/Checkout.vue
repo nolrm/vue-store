@@ -14,7 +14,9 @@
             class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
             :class="{ 'is-invalid': validationErrors.firstname }"
           />
-          <span v-if="validationErrors.firstname" class="text-red-500">Last name is required</span>
+          <span v-if="validationErrors.firstname" class="text-red-500"
+            >Last name is required</span
+          >
         </div>
 
         <div class="form-control mb-5">
@@ -27,7 +29,9 @@
             class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
             :class="{ 'is-invalid': validationErrors.lastname }"
           />
-          <span v-if="validationErrors.lastname" class="text-red-500"> Last name is required </span>
+          <span v-if="validationErrors.lastname" class="text-red-500">
+            Last name is required
+          </span>
         </div>
 
         <div class="form-control mb-5">
@@ -41,7 +45,9 @@
             class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
             :class="{ 'is-invalid': validationErrors.mobile }"
           />
-          <span v-if="validationErrors.mobile" class="text-red-500">Mobile number is required</span>
+          <span v-if="validationErrors.mobile" class="text-red-500"
+            >Mobile number is required</span
+          >
         </div>
 
         <div class="form-control mb-5">
@@ -54,7 +60,9 @@
             class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-200"
             :class="{ 'is-invalid': validationErrors.email }"
           />
-          <span v-if="validationErrors.email" class="text-red-500">Email is required</span>
+          <span v-if="validationErrors.email" class="text-red-500"
+            >Email is required</span
+          >
         </div>
 
         <div class="form-control mb-5">
@@ -66,15 +74,23 @@
             :class="{ 'is-invalid': validationErrors.notes }"
             rows="4"
           ></textarea>
-          <span v-if="validationErrors.notes" class="text-red-500">notes is required</span>
+          <span v-if="validationErrors.notes" class="text-red-500"
+            >notes is required</span
+          >
         </div>
 
         <ul class="list-disc pl-4">
           <li>No cash accepted and No eftpos facility for online orders.</li>
           <li>Estimate made to order cooking time is minimum 60mins.</li>
-          <li>Please don't submit same order twice, wait for a confirmation message.</li>
+          <li>
+            Please don't submit same order twice, wait for a confirmation
+            message.
+          </li>
           <li>No refund/cancellation policy.</li>
-          <li>We do not accept orders in advance. Kindly place your order for same day!</li>
+          <li>
+            We do not accept orders in advance. Kindly place your order for same
+            day!
+          </li>
         </ul>
 
         <div>
@@ -99,15 +115,15 @@
           lastname: '',
           mobile: '',
           email: '',
-          notes: '',
+          notes: ''
         },
         validationErrors: {
           firstname: false,
           lastname: false,
           mobile: false,
           email: false,
-          notes: false,
-        },
+          notes: false
+        }
       };
     },
     methods: {
@@ -127,7 +143,7 @@
           lastname: false,
           mobile: false,
           email: false,
-          notes: false,
+          notes: false
         };
 
         // Validate mandatory fields
@@ -154,8 +170,8 @@
       hasValidationErrors() {
         // Check if there are any validation errors
         return Object.values(this.validationErrors).some((error) => error);
-      },
-    },
+      }
+    }
   };
 </script>
 

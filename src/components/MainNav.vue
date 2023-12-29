@@ -24,12 +24,12 @@
       totalQty() {
         // Access the getter from the store
         return this.$store.getters['cartTotalItems'] || 0;
-      },
+      }
     },
     methods: {
       test() {
         // Handle links logic
-      },
-    },
+      }
+    }
   };
 </script>

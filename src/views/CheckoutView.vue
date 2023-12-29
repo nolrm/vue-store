@@ -32,7 +32,7 @@
     components: {
       MainLayout,
       Checkout,
-      OrderSummary,
-    },
+      OrderSummary
+    }
   };
 </script>

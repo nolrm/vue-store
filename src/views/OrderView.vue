@@ -7,7 +7,11 @@
         <div>
           <h2 class="text-xl mb-3">Categories</h2>
           <ul>
-            <li v-for="(category, index) in categories" :key="category" class="mb-3 capitalize">
+            <li
+              v-for="(category, index) in categories"
+              :key="category"
+              class="mb-3 capitalize"
+            >
               <a :href="`#category-${index}`">
                 {{ category }}
               </a>
@@ -58,21 +62,21 @@
     components: {
       MainLayout,
       ProductList,
-      OrderSummary,
+      OrderSummary
     },
     data() {
       return {
         products: [],
         categories: [],
-        search: '',
+        search: ''
       };
     },
     computed: {
       filteredProducts() {
         return this.products.filter((product) =>
-          product.title.toLowerCase().includes(this.search.toLowerCase()),
+          product.title.toLowerCase().includes(this.search.toLowerCase())
         );
-      },
+      }
     },
     mounted() {
       this.fetchProducts();
@@ -80,20 +84,31 @@
     methods: {
       async fetchProducts() {
         try {
-          const response = await this.axios.get('https://fakestoreapi.com/products');
+          const response = await this.axios.get(
+            'https://fakestoreapi.com/products'
+          );
           this.products = response.data.slice(0, 15); // Using only the first 10 items for simplicity
           this.categories = this.getCategories();
+          console.log('tesat sdf hello there');
+          console.log('asdf ');
+          console.log('asdf asdf asdf');
+
+          console.log('asdf ');
         } catch (error) {
           console.error('Error fetching products:', error);
         }
       },
       getCategories() {
-        return Array.from(new Set(this.filteredProducts.map((product) => product.category)));
+        return Array.from(
+          new Set(this.filteredProducts.map((product) => product.category))
+        );
       },
       getProductsByCategory(category) {
         // Filter products based on the selected category
-        return this.filteredProducts.filter((product) => product.category === category);
-      },
-    },
+        return this.filteredProducts.filter(
+          (product) => product.category === category
+        );
+      }
+    }
   };
 </script>

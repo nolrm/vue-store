@@ -12,7 +12,7 @@
   import MainLayout from '@/layouts/MainLayout.vue';
   export default {
     components: {
-      MainLayout,
-    },
+      MainLayout
+    }
   };
 </script>
