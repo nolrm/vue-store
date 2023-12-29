@@ -9,7 +9,7 @@
           <p class="text-sm text-gray-500">Price: ${{ product.price }}</p>
 
           <div class="flex items-center space-x-2 mt-3">
-            <button
+            <m-button
               @click="removeFromCart(product)"
               class="text-red-500 bg-gray-200 rounded"
             >
@@ -27,9 +27,11 @@
                   d="M18 12H6"
                 />
               </svg>
-            </button>
+            </m-button>
+
             <span class="text-md font-semibold">{{ product.quantity }}</span>
-            <button
+
+            <m-button
               @click="addToCart(product)"
               class="bg-gray-800 text-white rounded hover:bg-gray-700"
             >
@@ -47,7 +49,7 @@
                   d="M12 6v12m6-6H6"
                 />
               </svg>
-            </button>
+            </m-button>
           </div>
         </div>
       </li>
@@ -66,7 +68,12 @@
 </template>
 
 <script>
+  import MButton from '@/components/MButton.vue';
+
   export default {
+    components: {
+      MButton
+    },
     computed: {
       cartItems() {
         // Access the getter from the store
