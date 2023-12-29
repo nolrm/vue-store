@@ -40,9 +40,9 @@
         this.$store.commit('addToCart', product);
         this.$store.dispatch('showNotification', {
           message: 'Added to cart',
-          type: 'success',
+          type: 'success'
         });
-      },
-    },
+      }
+    }
   };
 </script>
