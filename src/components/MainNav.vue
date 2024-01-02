@@ -19,17 +19,17 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    totalQty() {
-      // Access the getter from the store
-      return this.$store.getters['cartTotalItems'] || 0;
+  export default {
+    computed: {
+      totalQty() {
+        // Access the getter from the store
+        return this.$store.getters['cartTotalItems'] || 0;
+      }
+    },
+    methods: {
+      test() {
+        // Handle links logic
+      }
     }
-  },
-  methods: {
-    test() {
-      // Handle links logic
-    }
-  }
-};
+  };
 </script>
