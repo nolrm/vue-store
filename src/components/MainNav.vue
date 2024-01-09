@@ -8,9 +8,10 @@
       </div>
       <div class="space-x-4">
         <!-- Menu Links -->
-        <a href="/" class="text-white">Home</a>
         <a href="/order" class="text-white">Order menu</a>
-        <a href="/checkout" class="text-white">Cart ({{ totalQty }})</a>
+        <a href="/checkout" class="text-white">
+          <i class="ion-ios-cart"></i> ({{ totalQty }})
+        </a>
         <a href="/checkout" class="text-white">Checkout</a>
         <a href="/track-order" class="text-white">Track Order</a>
       </div>
