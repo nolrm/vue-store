@@ -5,14 +5,14 @@
         <h1 class="text-3xl font-semibold mb-4">Order details</h1>
         <p>Order placed succesfully, preapring your order.</p>
       </div>
-      
+
       <ul class="progress-container my-3">
         <li class="progress-step active">Order Placed</li>
         <li class="progress-step">In the Kitchen</li>
         <li class="progress-step">Ready to Pickup</li>
       </ul>
 
-      <hr class="my-7">
+      <hr class="my-7" />
 
       <div class="order-details">
         <dl>
@@ -21,22 +21,22 @@
         </dl>
 
         <dl>
-          <dt>Order Method: </dt>
+          <dt>Order Method:</dt>
           <dd>Pick up</dd>
         </dl>
 
         <dl>
-          <dt>Order time: </dt>
+          <dt>Order time:</dt>
           <dd>04/01/2024 16:58:31</dd>
         </dl>
 
         <dl>
-          <dt>Transaction ID: </dt>
+          <dt>Transaction ID:</dt>
           <dd>ORDER123123123123</dd>
         </dl>
       </div>
 
-      <hr class="my-7">
+      <hr class="my-7" />
 
       <div class="order-items">
         <ul>
@@ -48,7 +48,9 @@
                 </div>
                 <div class="text-right">
                   <p class="text-md font-semibold">${{ product.price }}</p>
-                  <span class="text-sm text-gray-500 mt-3">x{{ product.quantity }}</span>
+                  <span class="text-sm text-gray-500 mt-3"
+                    >x{{ product.quantity }}</span
+                  >
                 </div>
               </div>
             </div>
@@ -56,7 +58,7 @@
         </ul>
       </div>
 
-      <hr class="my-7">
+      <hr class="my-7" />
 
       <div class="order-details">
         <dl class="text-lg">
@@ -65,16 +67,16 @@
         </dl>
 
         <dl>
-          <dt>Payment Method: </dt>
+          <dt>Payment Method:</dt>
           <dd>Visa/Mastercard</dd>
         </dl>
 
         <dl>
-          <dt>Contact: </dt>
+          <dt>Contact:</dt>
           <dd>0123456</dd>
         </dl>
 
-        <p class="font-semibold">Note: </p>
+        <p class="font-semibold">Note:</p>
         <p>NA</p>
       </div>
     </div>
@@ -92,7 +94,7 @@
         // Access the getter from the store
         return this.$store.state.cart.items || [];
       }
-    },
+    }
   };
 </script>
 
@@ -138,7 +140,7 @@
   .order-details {
     dt {
       display: inline-block;
-      padding-right: .5em;
+      padding-right: 0.5em;
       font-weight: 700;
     }
     dd {

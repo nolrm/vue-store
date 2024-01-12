@@ -88,11 +88,6 @@
           );
           this.products = response.data.slice(0, 15); // Using only the first 10 items for simplicity
           this.categories = this.getCategories();
-          console.log('tesat sdf hello there');
-          console.log('asdf ');
-          console.log('asdf asdf asdf');
-
-          console.log('asdf ');
         } catch (error) {
           console.error('Error fetching products:', error);
         }
